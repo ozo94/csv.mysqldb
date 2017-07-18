@@ -1,7 +1,7 @@
 import pandas as pd
 
-basic_info = pd.read_csv('data_t1.csv')
-fopen = open('basic_info.csv', 'w')
+basic_info = pd.read_csv('../basic_data/data_t1.csv')
+fopen = open('../basic_data/basic_info.csv', 'w')
 
 id = 0
 fopen.write('ID,Name,Sex,Company,Duty,Tel,Email'+'\n')

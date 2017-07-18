@@ -14,10 +14,10 @@ def get_avator(path):
         Company = data[0]
         Name = data[1]
 
-        # 以姓名，公司为key，将图片存入字典
+        # 以姓名，公司为key，将图片存入字典, 以二进制流的方式读取图片信息
         key = (Name, Company)
 
-        fp = open(os.path.join(path, dir))
+        fp = open(os.path.join(path, dir), 'rb')
         img = fp.read()
         fp.close()
 
@@ -29,11 +29,11 @@ def get_avator(path):
 
 def update_avator(table, conn):
     cursor = conn.cursor()
-
+    num = 0
     # 在basic_info中寻找对应的专家，获取id
     for key in table.keys():
         # print key[1], key[0]
-        # ID, Name, Sex, Company, Duty, Tel, Email
+        # basic_info表的信息： ID, Name, Sex, Company, Duty, Tel, Email
         find_professor = "SELECT * FROM basic_info \
                 WHERE Name = '%s' AND Company = '%s'" % (key[0], key[1])
         cursor.execute(find_professor)
@@ -41,22 +41,24 @@ def update_avator(table, conn):
 
         try:
             id = data[0]
-            print id, key[0]
-            # 将对应的id ，img 存入表avator中
+            # print id, key[0]
+            # print table[key]
+            # 将对应的id ，img 存入表avator中，escape将流进行安全的转义（不转义%/_）
             img = MySQLdb.escape_string(table[key])
             add_avator = "REPLACE INTO avator (ID, img) \
                           VALUES ('%d', '%s' )" % (id, img)
             cursor.execute(add_avator)
             conn.commit()
-            print 'sucess'
+            # print 'sucess'
+            num += 1
         except Exception,e:
             print  e
-
+    print num
     cursor.close()
     conn.close()
 
 if __name__ == '__main__':
-    path = 'Avator'
+    path = '../basic_data/Avator'
 
     #  头像的存储
     judge_table = get_avator(path)
