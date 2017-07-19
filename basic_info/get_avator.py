@@ -1,6 +1,7 @@
 # coding=utf-8
-from db import set_connect
 import os
+
+from db import set_connect
 
 def get_avator(conn, id, path):
     '''

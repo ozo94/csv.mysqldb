@@ -16,3 +16,4 @@ for x in basic_info.iterrows():
             data[i]= ''
     fopen.write(str(id)+','+data[2]+','+data[4]+','+data[3]+','+data[0]+','+str(data[1])+','+str(data[6])+'\n')
     id += 1
+

@@ -1,7 +1,8 @@
 # coding=utf-8
 import os
-from db import set_connect
+
 import MySQLdb
+from db import set_connect
 
 def get_avator(path):
     path_dir = os.listdir(path)
