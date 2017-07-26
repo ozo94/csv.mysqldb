@@ -53,7 +53,7 @@ def update_avator(table, conn):
             # print 'sucess'
             num += 1
         except Exception,e:
-            print  e
+            print  e, key[0], key[1]
     print num
     cursor.close()
     conn.close()
