@@ -5,7 +5,7 @@ sys.setdefaultencoding('utf8')
 
 institute = pd.read_csv('../lab_data/yjs.csv', encoding='gb2312')
 
-fp = open('../lab_data/institute.csv', 'w')
+fp = open('../data/lab_data/institute.csv', 'w')
 
 fp.write('id,name,city,address,post_code,website\n')
 

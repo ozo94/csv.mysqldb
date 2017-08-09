@@ -6,7 +6,7 @@ import pandas as pd
 selected = {'0802', '0804', '0805', '0806', '0808', '0809', '0811',
         '0812', '0817', '0830', '0831'}
 
-fp = open('../lab_data/seleted_core_sub.csv', 'w')
+fp = open('../data/lab_data/seleted_core_sub.csv', 'w')
 fp.write('id,code,sub,college\n')
 
 conn = set_connect()

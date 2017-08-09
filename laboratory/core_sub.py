@@ -4,10 +4,10 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-core_sub1 = pd.read_csv('../lab_data/zdxk1.csv')
-core_sub2 = pd.read_csv('../lab_data/zdxk1.csv')
+core_sub1 = pd.read_csv('../data/lab_data/zdxk1.csv')
+core_sub2 = pd.read_csv('../data/lab_data/zdxk1.csv')
 
-fp = open('../lab_data/core_sub.csv', 'w')
+fp = open('../data/lab_data/core_sub.csv', 'w')
 fp.write('id,sub,sub_code,college\n')
 id = 0
 for data in core_sub1.iterrows():

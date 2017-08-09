@@ -59,7 +59,7 @@ def update_avator(table, conn):
     conn.close()
 
 if __name__ == '__main__':
-    path = '../basic_data/Avator'
+    path = '../data/basic_data/Avator'
 
     #  头像的存储
     judge_table = get_avator(path)

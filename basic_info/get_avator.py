@@ -38,7 +38,7 @@ def get_avator(conn, id, path):
             return os.path.join(path, 'blank.jpg')
 
 if __name__ == '__main__':
-    path = '../get_avator'
+    path = '../data/get_avator'
     conn = set_connect()
     for id in range(226):
         avator = get_avator(conn, id, path)

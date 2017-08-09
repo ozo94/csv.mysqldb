@@ -17,9 +17,10 @@ def wirte_data(csvObject, id):
     return id
 
 if __name__ == '__main__':
-    basic_info = pd.read_csv('../basic_data/data_t1.csv')
-    kz = pd.read_csv('../basic_data/data_kz.csv')
-    fopen = open('../basic_data/basic_info.csv', 'w')
+    basic_info = pd.read_csv('../data/basic_data/data_t1.csv')
+    kz = pd.read_csv('../data/basic_data/data_kz.csv')
+    fopen = open('../data/basic_data/basic_info.csv', 'w')
+
     fopen.write('ID,Name,Sex,Company,Duty,Tel,Email' + '\n')
 
     id = 0

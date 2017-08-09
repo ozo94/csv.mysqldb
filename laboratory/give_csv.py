@@ -7,9 +7,9 @@ sys.setdefaultencoding('utf8')
 
 
 # 整理985,211高校数据，以及所有的学校的信息
-college = pd.read_csv('../lab_data/2016_college.csv' , encoding='gb2312')
-college_112 = open('../lab_data/college_112.csv', 'w')
-college_all = open('../lab_data/college_all.csv', 'w')
+college = pd.read_csv('../data/lab_data/2016_college.csv' , encoding='gb2312')
+college_112 = open('../data/lab_data/college_112.csv', 'w')
+college_all = open('../data/lab_data/college_all.csv', 'w')
 
 college_112.write('id,college,city,985,211\n')
 college_all.write('id,college,city\n')
