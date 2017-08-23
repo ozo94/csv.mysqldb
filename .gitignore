@@ -1,3 +1,7 @@
 /.idea
 *.jpg
-/data
+/basic_data
+/get_avator
+/lab_data
+/works
+*.pyc
